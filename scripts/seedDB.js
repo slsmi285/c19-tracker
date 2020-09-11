@@ -15,5 +15,299 @@ const dailySeed = [
       masks: "",
       href: ""
     },
+    {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
+      {
+        state: "",
+        restrictions: "",
+        masks: "",
+        href: ""
+      },
     
 ]
