@@ -13,6 +13,8 @@ const User = require('user');
 let mandates = require("./model");
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 // Middleware - express first two code lines are needed
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,3 +25,17 @@ app.use(
         credentials: true
     })
 );
+
+// Add routes, both API and view
+app.use(routes);
+
+// Connect to MongoDB
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/travelstates";
+
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+
+// Start the API server
+app.listen(PORT, function() {
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
