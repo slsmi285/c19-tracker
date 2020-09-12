@@ -33,3 +33,28 @@ class Search extends Component {
       })
       .catch(err => this.setState({ error: err.message }));
   };
+
+  render() {
+    return (
+      <div>
+        <Container style={{ minHeight: "80%" }}>
+        
+          <h1 className="text-center">Enter the State you are traveling to!</h1>
+          <Alert
+            type="danger"
+            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
+          >
+            {this.state.error}
+          </Alert>
+          <SearchForm
+            handleFormSubmit={this.handleFormSubmit}
+            handleInputChange={this.handleInputChange}
+            region={this.state.region}
+          />
+         <SearchResults active_cases={this.state.active_cases}></SearchResults>
+        </Container>
+      </div>
+    );
+  }
+}
+export default Search;
