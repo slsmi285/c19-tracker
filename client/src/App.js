@@ -1,6 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import axios from 'axios';
+import About from "./pages/About";
+import Search from "./pages/Search";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper";
+import SignIn from "./components/SignIn";
+import Mandates from "./components/Mandates";
 
 function App() {
   return (
