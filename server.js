@@ -9,8 +9,8 @@ const cookieParser = require("cookie-parser");//parse all the cookies using for 
 const bcrypt = require("bcryptjs");//hashing the passwords
 const session = require("express-session");//express sessions
 const bodyParser = require("body-parser");//parse request and response object- use in middleware
-const User = require('./user');
-let travel = require("./models");
+const User = require('./models/user');
+//let travel = require("./models");
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //important to this code -- need this in order for this to work with credentials
 app.use(
     cors({
-        origin: "http://localhost:3001", //<-- location of the react app we are connecting to
+        origin: "http://localhost:3000", //<-- location of the react app we are connecting to
         credentials: true
     })
 );
@@ -35,6 +35,7 @@ app.use(
         secret: "secretcode",
         resave: true,
         saveUninitialized: true
+        
     })
 );
 
@@ -58,6 +59,9 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
 
 
 
+
+
+
 //Router - Mongo
 app.use(cors());
 //calling the router/endpoint
@@ -75,36 +79,55 @@ router.route("/getData").get(function (req, res) {
 });
 
 //Routes - passport 
-app.post("/login", (req, res) => {
+app.post("/login", (req, res, next) => {
+    console.log("login")
+    
     passport.authenticate("local", (err, user, info) => {
         if (err) throw err;
+        console.log(user)
         if (!user) res.send("No User Exists");
         else {
             req.login(user, err => {
                 if (err) throw err;
+                console.log("successful")
                 res.send('Successfully Authenticated');
             })
         }
-    })(req, res, next);
+    })
 });
-app.post("/register", (req, res, next) => {
-    User.findOne({ username: req.body.username }, async (err, doc) => {
-        if (err) throw err;
-        if (doc) res.send("User Already Exists");
-        if (!doc) {
-            //using below code to encrypt the password to a number -- 10 as the "salt", this is to avoid breach - removed "await" due to 
-            const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
-            const newUser = new User({
-                username: req.body.username,
-                // password in database will show as "hashed" /"hidden"
-                password: hashedPassword,
-            });
-           await newUser.save()
+app.post("/register", async (req, res, next) => {
+    console.log(req.body);
+    let user = await User.findOne({ username: req.body.username });
+    console.log("User console", user);
+    //Check if user exists
+    if (user) {
+        console.log("User exists");
+        return res.status(400).json({
+            errors: [{ msg: "User already exists." }],
+        });
+    
+ }
+
+
+        //using below code to encrypt the password to a number -- 10 as the "salt", this is to avoid breach - removed "await" due to 
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        console.log(hashedPassword);
+        const newUser = new User({
+            username: req.body.username,
+            // password in database will show as "hashed" /"hidden" (for user)
+            password: hashedPassword,
+        });
+        newUser.save().then(response => {
+            console.log(response);
             res.send("User Created");
-        }
-    });
-});
+        })
+
+    })
+
+
+
+
 app.get("/user", (req, res) => {
     res.send(req.User);//The req.user stores the entire user that has been authenticated inside of it, has all the session data
 });

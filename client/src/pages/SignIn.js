@@ -22,7 +22,7 @@ function SignIn() {
                 password: registerPassword,
             },
             withCredentials: true,
-            url: "http://localhost:3000/register",
+            url: "/register",
         }).then((res) => console.log(res));
     };
 
@@ -34,7 +34,7 @@ function SignIn() {
                 password: loginPassword,
             },
             withCredentials: true,
-            url: "http://localhost:3000/login",
+            url: "/login",
         }).then((res) => setData(res.data));
     };
 
@@ -42,7 +42,7 @@ function SignIn() {
         axios({
             method: "GET",
             withCredentials: true,
-            url: "http://localhost:3000/user",
+            url: "/user",
         }).then((res) => {
             setData(res.data);
             console.log(res.data);
@@ -70,14 +70,7 @@ function SignIn() {
                         <button onClick={getUser}>Submit</button>
                         {data ? <h1>Welcome Back {data.username}</h1> : null}
                     </div>
-                    <div>
-                        <h1 className="text-center">Enter the State you are traveling to!</h1>
-
-                    type="danger"
-                    style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-
-                        {this.state.error}
-                    </div>
+                   
                 </Container>
             </div>
         );

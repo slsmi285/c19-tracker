@@ -2,10 +2,10 @@
 //bcrypt is used to unhash the password
 //parameter passed to this function  -- passport library -- to use thruout the entire app
 
-const User = require('./user');
+const User = require('./models/user');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-const localStrategy = require('passport-local').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
 
 
 module.exports = function (passport) {
@@ -13,7 +13,8 @@ module.exports = function (passport) {
     // lookup User in db, will get err or user.
     //done method - null is err and false is user...if user compare with bcrypt
     passport.use(
-        new localStrategy((username, passport, done) => {
+        new LocalStrategy((username, password, done) => {
+            console.log(username, password);
             User.findOne({ username: username }, (err, user) => {
                 if (err) throw err;
                 if (!user) return done(null, false);

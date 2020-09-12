@@ -14,10 +14,12 @@ class Search extends Component {
 
      // When the component mounts, get a result of active cases
   componentDidMount() {
+    if (this.state.region) {
     API.getRegion()
       .then(res => this.setState({ region: res.data.data.summary.active_cases }))
       .catch(err => console.log(err));
   }
+}
   handleInputChange = event => {
     this.setState({ region: event.target.value });
   };

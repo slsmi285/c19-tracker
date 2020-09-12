@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 
 function App() {
-  render() {
+ 
     return (
       < Router >
         < div className="App" >
@@ -20,7 +20,7 @@ function App() {
               <Route exact path="/" component={About} />
 
               <Route exact path="/about" component={About} />
-              <Route exact path="/signin" components={SignIn} />
+              <Route exact path="/signin" component={SignIn} />
               <Route exact path="/search" component={Search} />
 
 
@@ -31,6 +31,6 @@ function App() {
       </Router >
     );
   }
-};
+
 
 export default App;
