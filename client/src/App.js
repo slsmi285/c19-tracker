@@ -13,22 +13,24 @@ import Mandates from "./components/Mandates";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    < Router >
+      < div className="App" >
+        <div>
+          <Navbar />
+          <Wrapper>
+
+            <Route exact path="/" component={About} />
+
+            <Route exact path="/about" component={About} />
+            <Route exact path="/signin" components={SignIn} />
+            <Route exact path="/search" component={Search} />
+
+            <Route exact path="/Mandates" components={Mandates} />
+          </Wrapper>
+          <Footer />
+        </div>
+      </div >
+    </Router >
   );
 }
 
