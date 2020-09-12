@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/signin" components={SignIn} />
             <Route exact path="/search" component={Search} />
-
+    
             <Route exact path="/Mandates" components={Mandates} />
           </Wrapper>
           <Footer />
