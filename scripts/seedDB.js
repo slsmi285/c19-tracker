@@ -10,306 +10,311 @@ mongoose.connect (
 
 const dailySeed = [
     {
-      state: "",
-      restrictions: "",
-      masks: "",
-      href: ""
+      state: "Alabama",
+      restrictions: "None",
+      masks: "Statewide",
+      href: "https://alabama.travel/my-trip/staying-safe"
     },
     {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Alaska",
+        restrictions: "Quarantine with testing exceptions",
+        masks: "Some cities",
+        href: "https://covid19.alaska.gov/travelers/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Arizona",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://tourism.az.gov/covid-19-updates-2/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Arkansas",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.arkansas.com/travel-advisory/covid-19"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "California",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.visitcalifornia.com/latest-covid-19-coronavirus"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Colorado",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://covid19.colorado.gov/prepare-protect-yourself/prevent-the-spread/travel"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Conneticut",
+        restrictions: "Quarantine",
+        masks: "Statewide",
+        href: "https://portal.ct.gov/Coronavirus/Covid-19-Knowledge-Base/Travel-In-or-Out-of-CT"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Delaware",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.visitdelaware.com/industry/covid-19-in-delaware/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Florida",
+        restrictions: "None",
+        masks: "No",
+        href: "https://floridahealthcovid19.gov/travelers/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Georgia",
+        restrictions: "None",
+        masks: "No",
+        href: "https://dph.georgia.gov/covid-19-travel"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Hawaii",
+        restrictions: "Quarantine",
+        masks: "Statewide",
+        href: "https://www.hawaiitourismauthority.org/news/alerts/covid-19-novel-coronavirus/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Idaho",
+        restrictions: "Quarantine for certain cities",
+        masks: "Some cities",
+        href: "https://visitidaho.org/covid-19-travel-alert/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Illinois",
+        restrictions: "Quarantine for certain cities",
+        masks: "Statewide",
+        href: "https://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus/travel-guidance"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Indiana",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.coronavirus.in.gov/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Iowa",
+        restrictions: "None",
+        masks: "No",
+        href: "https://www.traveliowa.com/aspx/general/dynamicpage.aspx?id=204"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Kansas",
+        restrictions: "None",
+        masks: "No",
+        href: "https://www.coronavirus.kdheks.gov/175/Travel-Exposure-Related-Isolation-Quaran"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Kentucky",
+        restrictions: "Quarantine",
+        masks: "Statewide",
+        href: "https://governor.ky.gov/covid19"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Louisiana",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://louisianatravelassociation.org/covid-19-resources"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Maine",
+        restrictions: "Quarantine with testing exceptions",
+        masks: "Statewide",
+        href: "https://www.maine.gov/covid19/restartingmaine/keepmainehealthy/faqs"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Maryland",
+        restrictions: "Health advisory",
+        masks: "Statewide",
+        href: "https://www.visitmaryland.org/article/travel-alerts"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Massachusetts",
+        restrictions: "Quarantine with testing exceptions",
+        masks: "Statewide",
+        href: "https://www.mass.gov/info-details/covid-19-updates-and-information"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Michigan",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.michigan.gov/coronavirus/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Minnesota",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://visitmississippi.org/covid-19-travel-alert/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Mississippi",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://visitmississippi.org/covid-19-travel-alert/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Missouri",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://www.visitmo.com/travel-updates"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Montana",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://www.visitmt.com/travel-alerts.html"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Nebraska",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "http://dhhs.ne.gov/Pages/COVID-19-Traveler-Recommendations.aspx"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Nevada",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://nvhealthresponse.nv.gov/info/travelers-visitors/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "New Hampshire",
+        restrictions: "Quarantine",
+        masks: "Statewide",
+        href: "https://www.covidguidance.nh.gov/out-state-visitors"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "New Jersey",
+        restrictions: "Health advisory",
+        masks: "Statewide",
+        href: "https://covid19.nj.gov/faqs/nj-information/general-public/which-states-are-on-the-travel-advisory-list-are-there-travel-restrictions-to-or-from-new-jersey"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "New Mexico",
+        restrictions: "Quarantine",
+        masks: "Statewide",
+        href: "https://www.newmexico.org/covid-19-traveler-information/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "New York",
+        restrictions: "Quarantine",
+        masks: "Statewide",
+        href: "https://coronavirus.health.ny.gov/covid-19-travel-advisory"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "North Carolina",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.nc.gov/covid-19/covid-19-travel-resources"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "North Dakota",
+        restrictions: "None",
+        masks: "No",
+        href: "https://www.health.nd.gov/diseases-conditions/coronavirus/travel"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Ohio",
+        restrictions: "Health advisory",
+        masks: "Statewide",
+        href: "https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Oklahoma",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://coronavirus.health.ok.gov/travel"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Oregon",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://traveloregon.com/travel-alerts/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Pennsylvania",
+        restrictions: "Health advisory",
+        masks: "Statewide",
+        href: "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Travelers.aspx"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Rhode Island",
+        restrictions: "Quarantine with testing exceptions",
+        masks: "Statewide",
+        href: "https://health.ri.gov/covid/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "South Carolina",
+        restrictions: "Health advisory",
+        masks: "Statewide",
+        href: "https://scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/travelers-covid-19"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "South Dakota",
+        restrictions: "None",
+        masks: "No",
+        href: "https://www.travelsouthdakota.com/coronavirus-covid-19"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Tennessee",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://www.tnvacation.com/articles/tennessee-travel-amid-coronavirus"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Texas",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://gov.texas.gov/travel-texas/page/covid19"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Utah",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://www.visitutah.com/plan-your-trip/covid-19/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Vermont",
+        restrictions: "Quarantine with testing exceptions",
+        masks: "Statewide",
+        href: "https://www.healthvermont.gov/response/coronavirus-covid-19/traveling-vermont"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Virginia",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://washington.org/dc-information/coronavirus-travel-update-washington-dc"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Washington",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://www.vdh.virginia.gov/coronavirus/frequently-asked-questions/u-s-travelers/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Washington, DC",
+        restrictions: "Quarantine",
+        masks: "Statwide",
+        href: "https://www.experiencewa.com/articles/date-coronavirus-travel-advisory"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "West Virginia",
+        restrictions: "None",
+        masks: "Statewide",
+        href: "https://wvtourism.com/travel-alert/"
       },
       {
-        state: "",
-        restrictions: "",
-        masks: "",
-        href: ""
+        state: "Wisconsin",
+        restrictions: "None",
+        masks: "No",
+        href: "https://www.dhs.wisconsin.gov/covid-19/travel.htm"
+      },
+      {
+        state: "Wyoming",
+        restrictions: "None",
+        masks: "Some cities",
+        href: "https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/covid-19-orders-and-guidance/"
       }
-    
 ];
 
 db.Daily 

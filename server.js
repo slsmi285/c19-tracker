@@ -10,7 +10,7 @@ const bcrypt = require("bcryptjs");//hashing the passwords
 const session = require("express-session");//express sessions
 const bodyParser = require("body-parser");//parse request and response object- use in middleware
 const User = require('user');
-let mandates = require("./model");
+let travel = require("./model");
 const app = express();
 
 //const PORT = process.env.PORT || 3001;
