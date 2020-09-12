@@ -28,7 +28,7 @@ app.use(
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
-  }
+}
 
 app.use(
     session({
@@ -88,19 +88,19 @@ app.post("/login", (req, res) => {
     })(req, res, next);
 });
 app.post("/register", (req, res, next) => {
-    User.findOne({ username: req.body.username }, (err, doc) => {
+    User.findOne({ username: req.body.username }, async (err, doc) => {
         if (err) throw err;
         if (doc) res.send("User Already Exists");
         if (!doc) {
-            //using below code to encrypt the password to a number -- 10 as the "salt", this is to avoid breach
-            const hashedPassword = bcrypt.hash(req.body.password, 10);
+            //using below code to encrypt the password to a number -- 10 as the "salt", this is to avoid breach - removed "await" due to 
+            const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
             const newUser = new User({
                 username: req.body.username,
                 // password in database will show as "hashed" /"hidden"
                 password: hashedPassword,
             });
-            newUser.save()
+           await newUser.save()
             res.send("User Created");
         }
     });
@@ -112,10 +112,7 @@ app.get("/user", (req, res) => {
 
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-  });
+});
 
-//app.listen(PORT, function () {
-//    console.log("Server is running on Port: " + PORT);
-//});

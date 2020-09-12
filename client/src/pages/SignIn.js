@@ -1,16 +1,18 @@
-import React, { Component } from "react";
-import ReactDOM from 'react-dom';
+//import React, { Component } from "react";
+import React, {useState} from 'react';
 import Container from "../components/Container";
-
+import axios from 'axios';
 //import SearchResults from "../components/Passport";
 
 
 function SignIn() {
+
     const [registerUsername, setRegisterUsername] = useState("");
     const [registerPassword, setRegisterPassword] = useState("");
     const [loginUsername, setLoginUsername] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
     const [data, setData] = useState(null);
+
     //logic to send it off to the backend
     const register = () => {
         axios({
@@ -47,7 +49,7 @@ function SignIn() {
         });
     };
 
-    render() {
+    //render() {
         return (
             <div>
                 <Container style={{ minHeight: "80%" }}>
@@ -80,6 +82,6 @@ function SignIn() {
             </div>
         );
     }
-}
+
 
 export default SignIn;
