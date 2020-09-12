@@ -5,11 +5,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from 'axios';
 import About from "./pages/About";
 import Search from "./pages/Search";
+import SignIn from "./pages/SignIn";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
-import SignIn from "./components/SignIn";
-import Mandates from "./components/Mandates";
+import Mandates from "./components/Travel";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/signin" components={SignIn} />
             <Route exact path="/search" component={Search} />
-    
+
             <Route exact path="/Mandates" components={Mandates} />
           </Wrapper>
           <Footer />
