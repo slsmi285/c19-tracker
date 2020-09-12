@@ -26,16 +26,48 @@ app.use(
     })
 );
 
+app.use(
+    session({
+        secret: "secretcode",
+        resave: true,
+        saveUninitialized: true
+    })
+);
+
+app.use(cookieParser("secretcode"));
+app.use(passport.initialize());
+app.use(passport.session());
+require('./passportConfig')(passport);
+
+
+//end of middleware
+
 // Add routes, both API and view
 app.use(routes);
+
+//Router - Mongo
+app.use(cors());
+//calling the router/endpoint
+app.use("/", router);
+
+//use the find() method to retrieve all the documents from the mandates collection
+router.route("/getData").get(function (req, res) {
+    mandates.find({}, function (err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
 
 // Connect to MongoDB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/travelstates";
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
