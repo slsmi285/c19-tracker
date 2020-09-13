@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const travelRoutes = require("./travel");
+const infoRoutes = require("./info");
 
 // Travel state status routes
-router.use("/travel", travelRoutes);
+router.use("/info", infoRoutes);
 
 module.exports = router;
