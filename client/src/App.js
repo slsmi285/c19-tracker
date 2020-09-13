@@ -23,7 +23,6 @@ function App() {
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/search" component={Search} />
 
-
             </Wrapper>
             <Footer />
           </div>
