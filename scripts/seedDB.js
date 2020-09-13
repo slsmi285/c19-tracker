@@ -317,9 +317,12 @@ const dailySeed = [
       }
 ];
 
-db.Daily 
+// 1. Create the model for state restrictions
+// e.g. restriction
+
+db.Daily
     .remove({})
-    .then(() => db.Daily.collection.insertMany(dailySeed))
+    .then(() => db.Daily.insertMany(dailySeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

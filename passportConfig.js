@@ -2,7 +2,7 @@
 //bcrypt is used to unhash the password
 //parameter passed to this function  -- passport library -- to use thruout the entire app
 
-const User = require('./models/user');
+const db = require('./models');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -14,9 +14,8 @@ module.exports = function (passport) {
     //done method - null is err and false is user...if user compare with bcrypt
     passport.use(
         new LocalStrategy((username, password, done) => {
-            console.log(username, password);
-            User.findOne({ username: username }, (err, user) => {
-                if (err) throw err;
+            db.User.findOne({ username: username }, (err, user) => {
+                if (err) return done(err, false);
                 if (!user) return done(null, false);
                 bcrypt.compare(password, user.password, (err, result) => {
                     if (err) throw err;
@@ -24,6 +23,7 @@ module.exports = function (passport) {
                         return done(null, user);
                     } else {
                         return done(null, false);//comparison failed, no user-done
+                        console.log("Wrong password")
                     }
                 });
             });
@@ -31,30 +31,15 @@ module.exports = function (passport) {
     );
     //passport requires a serialize and deserialize user function -- authenticate
     // serialize - stores a cookie (user id inside of it)within the browser, deserialize - unravels that cookie returns a user from it
-    //deserialize unravels -- find the user in the database that matches the id for the return
-    passport.serializeUser(function (req, user, done) {
-        done(null, user.user_id);
+    // deserialize unravels -- find the user in the database that matches the id for the return
+    passport.serializeUser(function(user, cb) {
+        cb(null, user.username);
     });
-
-
-
-    passport.deserializeUser(function (user_id, done) {
-        getUserInfo(user_id).then(function (user) {
-            return done(null, user);
-        }, function (err) {
-            return done(err, null);
-        });
+      
+    passport.deserializeUser(function(username, cb) {
+        db.User.findOne({ username }, (err, user) => {
+            if (err) { return cb(err); }
+            cb(null, user);
+        })
     });
 };
-
- //passport.serializeUser(function(user, cb) {
-      //cb(null, user.id);
- // });
-  //passport.deserializUser(function(id, db) {
-    //  User.findOne({_id: id}.then(err,user) => {
-    //      //cb(err,user); 
-    //    const userInformation = {
-    //        username: user.username};//customizing, only storing the username object
-    //        cb(err, userInformation);
-    //  });
-  //});
