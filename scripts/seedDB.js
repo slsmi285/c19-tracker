@@ -3,12 +3,18 @@ const db = require("../models");
 
 // This file empties the travel collection and inserts the books below
 
-mongoose.connect (
-    process.env.MONGODB_URI ||
-    "mongodb://localhost/travelstates"
+
+mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/project0?retryWrites=true&w=majority",
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    },
+    () => {
+        console.log("Mongoose is Connected");
+    }
 );
 
-const dailySeed = [
+const infoSeed = [
     {
       state: "Alabama",
       restrictions: "None",
@@ -320,9 +326,9 @@ const dailySeed = [
 // 1. Create the model for state restrictions
 // e.g. restriction
 
-db.Daily
+db.Info
     .remove({})
-    .then(() => db.Daily.insertMany(dailySeed))
+    .then(() => db.Info.insertMany(infoSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

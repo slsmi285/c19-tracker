@@ -1,4 +1,4 @@
 module.exports = {
-    Travel: require("./travel"),
+    Travel: require("./infostate"),
     User: require('./user')
   };
