@@ -7,4 +7,5 @@ function SearchResults(props) {
        <p>Active Cases in this region: { props.active_cases }</p>
      );
 }
+
 export default SearchResults;

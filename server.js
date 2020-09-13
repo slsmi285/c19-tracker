@@ -9,6 +9,7 @@ const bcrypt = require("bcryptjs");//hashing the passwords
 const session = require("express-session");//express sessions
 const bodyParser = require("body-parser");//parse request and response object- use in middleware
 const User = require('./models/user');
+const { infostate } = require("./models");
 //let travel = require("./models");
 const app = express();
 
@@ -55,16 +56,18 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
     }
 );
 
-// //use the find() method to retrieve all the documents from the mandates collection
-// router.route("/getData").get(function (req, res) {
-//     mandates.find({}, function (err, result) {
-//         if (err) {
-//             res.send(err);
-//         } else {
-//             res.send(result);
-//         }
-//     });
-// });
+// Local API for hardcoded infostate 
+app.use(routes);
+//use the find() method to retrieve all the documents from the infostate collection from mongodb
+router.route("/getData").get(function (req, res) {
+    infostate.find({}, function (err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
 
 //Routes - passport 
 app.post("/login", (req, res, next) => {

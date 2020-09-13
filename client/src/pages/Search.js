@@ -54,6 +54,7 @@ class Search extends Component {
             region={this.state.region}
           />
          <SearchResults active_cases={this.state.active_cases}></SearchResults>
+         
         </Container>
       </div>
     );
