@@ -4,6 +4,7 @@ import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 import Alert from "../components/Alert";
+import Info from "../components/Info/info";
 
 class Search extends Component {
     state = {
@@ -36,6 +37,7 @@ class Search extends Component {
       .catch(err => this.setState({ error: err.message }));
   };
 
+
   render() {
     return (
       <div>
@@ -54,6 +56,7 @@ class Search extends Component {
             region={this.state.region}
           />
          <SearchResults active_cases={this.state.active_cases}></SearchResults>
+        <Info></Info>
          
         </Container>
       </div>
