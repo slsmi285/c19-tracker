@@ -1,16 +1,14 @@
+// Dependencies
 const router = require("express").Router();
-const infoController = require("../../controllers/infoController");
+const infoStateController = require("../../controllers/infoStateController");
 
-// Matches with "/api/travel"
-router.route("/")
-  .get(infoController.findAll)
-  .post(infoController.create);
+// Matches with "/api/info"
+router.route("/").get(infoStateController.findOne);
 
-// Matches with "/api/travel/:id"
-router
-  .route("/:id")
-  .get(infoController.findById)
-  .put(infoController.update)
-  .delete(infoController.remove);
+// Matches with "/api/info/:id"
+// router
+//   .route("/region")
+//   .get(infoStateController.findOne)
+
 
 module.exports = router;

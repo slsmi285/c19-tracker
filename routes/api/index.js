@@ -1,7 +1,8 @@
+// Dependencies
 const router = require("express").Router();
 const infoRoutes = require("./info");
 
-// Travel state status routes
+// Info routes
 router.use("/info", infoRoutes);
-
+// Exporting
 module.exports = router;

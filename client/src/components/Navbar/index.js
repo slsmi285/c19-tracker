@@ -33,6 +33,14 @@ function Navbar() {
               Search
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/info"
+              className={window.location.pathname === "/info" ? "nav-link active" : "nav-link"}
+            >
+              State-Info
+            </Link>
+          </li>
 
           <li className="nav-item">
             <Link
@@ -42,6 +50,7 @@ function Navbar() {
               SignIn
             </Link>
           </li>
+      
         </ul>
       
         

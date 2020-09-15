@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the travel collection and inserts the books below
+// This file empties the InfoState collection and inserts the InfoStateSeed below
 
 
 mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/project0?retryWrites=true&w=majority",
@@ -14,309 +14,309 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
     }
 );
 
-const infoSeed = [
+const InfoStateSeed = [
     {
-      state: "Alabama",
+      stateinfo: "Alabama",
       restrictions: "None",
       masks: "Statewide",
       href: "https://alabama.travel/my-trip/staying-safe"
     },
     {
-        state: "Alaska",
+        stateinfo: "Alaska",
         restrictions: "Quarantine with testing exceptions",
         masks: "Some cities",
         href: "https://covid19.alaska.gov/travelers/"
       },
       {
-        state: "Arizona",
+        stateinfo: "Arizona",
         restrictions: "None",
         masks: "Some cities",
         href: "https://tourism.az.gov/covid-19-updates-2/"
       },
       {
-        state: "Arkansas",
+        stateinfo: "Arkansas",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.arkansas.com/travel-advisory/covid-19"
       },
       {
-        state: "California",
+        stateinfo: "California",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.visitcalifornia.com/latest-covid-19-coronavirus"
       },
       {
-        state: "Colorado",
+        stateinfo: "Colorado",
         restrictions: "None",
         masks: "Statewide",
         href: "https://covid19.colorado.gov/prepare-protect-yourself/prevent-the-spread/travel"
       },
       {
-        state: "Conneticut",
+        stateinfo: "Conneticut",
         restrictions: "Quarantine",
         masks: "Statewide",
         href: "https://portal.ct.gov/Coronavirus/Covid-19-Knowledge-Base/Travel-In-or-Out-of-CT"
       },
       {
-        state: "Delaware",
+        stateinfo: "Delaware",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.visitdelaware.com/industry/covid-19-in-delaware/"
       },
       {
-        state: "Florida",
+        stateinfo: "Florida",
         restrictions: "None",
         masks: "No",
         href: "https://floridahealthcovid19.gov/travelers/"
       },
       {
-        state: "Georgia",
+        stateinfo: "Georgia",
         restrictions: "None",
         masks: "No",
         href: "https://dph.georgia.gov/covid-19-travel"
       },
       {
-        state: "Hawaii",
+        stateinfo: "Hawaii",
         restrictions: "Quarantine",
         masks: "Statewide",
         href: "https://www.hawaiitourismauthority.org/news/alerts/covid-19-novel-coronavirus/"
       },
       {
-        state: "Idaho",
+        stateinfo: "Idaho",
         restrictions: "Quarantine for certain cities",
         masks: "Some cities",
         href: "https://visitidaho.org/covid-19-travel-alert/"
       },
       {
-        state: "Illinois",
+        stateinfo: "Illinois",
         restrictions: "Quarantine for certain cities",
         masks: "Statewide",
         href: "https://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus/travel-guidance"
       },
       {
-        state: "Indiana",
+        stateinfo: "Indiana",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.coronavirus.in.gov/"
       },
       {
-        state: "Iowa",
+        stateinfo: "Iowa",
         restrictions: "None",
         masks: "No",
         href: "https://www.traveliowa.com/aspx/general/dynamicpage.aspx?id=204"
       },
       {
-        state: "Kansas",
+        stateinfo: "Kansas",
         restrictions: "None",
         masks: "No",
         href: "https://www.coronavirus.kdheks.gov/175/Travel-Exposure-Related-Isolation-Quaran"
       },
       {
-        state: "Kentucky",
+        stateinfo: "Kentucky",
         restrictions: "Quarantine",
         masks: "Statewide",
         href: "https://governor.ky.gov/covid19"
       },
       {
-        state: "Louisiana",
+        stateinfo: "Louisiana",
         restrictions: "None",
         masks: "Statewide",
         href: "https://louisianatravelassociation.org/covid-19-resources"
       },
       {
-        state: "Maine",
+        stateinfo: "Maine",
         restrictions: "Quarantine with testing exceptions",
         masks: "Statewide",
         href: "https://www.maine.gov/covid19/restartingmaine/keepmainehealthy/faqs"
       },
       {
-        state: "Maryland",
+        stateinfo: "Maryland",
         restrictions: "Health advisory",
         masks: "Statewide",
         href: "https://www.visitmaryland.org/article/travel-alerts"
       },
       {
-        state: "Massachusetts",
+        stateinfo: "Massachusetts",
         restrictions: "Quarantine with testing exceptions",
         masks: "Statewide",
         href: "https://www.mass.gov/info-details/covid-19-updates-and-information"
       },
       {
-        state: "Michigan",
+        stateinfo: "Michigan",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.michigan.gov/coronavirus/"
       },
       {
-        state: "Minnesota",
+        stateinfo: "Minnesota",
         restrictions: "None",
         masks: "Statewide",
         href: "https://visitmississippi.org/covid-19-travel-alert/"
       },
       {
-        state: "Mississippi",
+        stateinfo: "Mississippi",
         restrictions: "None",
         masks: "Statewide",
         href: "https://visitmississippi.org/covid-19-travel-alert/"
       },
       {
-        state: "Missouri",
+        stateinfo: "Missouri",
         restrictions: "None",
         masks: "Some cities",
         href: "https://www.visitmo.com/travel-updates"
       },
       {
-        state: "Montana",
+        stateinfo: "Montana",
         restrictions: "None",
         masks: "Some cities",
         href: "https://www.visitmt.com/travel-alerts.html"
       },
       {
-        state: "Nebraska",
+        stateinfo: "Nebraska",
         restrictions: "None",
         masks: "Some cities",
         href: "http://dhhs.ne.gov/Pages/COVID-19-Traveler-Recommendations.aspx"
       },
       {
-        state: "Nevada",
+        stateinfo: "Nevada",
         restrictions: "None",
         masks: "Statewide",
         href: "https://nvhealthresponse.nv.gov/info/travelers-visitors/"
       },
       {
-        state: "New Hampshire",
+        stateinfo: "New Hampshire",
         restrictions: "Quarantine",
         masks: "Statewide",
         href: "https://www.covidguidance.nh.gov/out-state-visitors"
       },
       {
-        state: "New Jersey",
+        stateinfo: "New Jersey",
         restrictions: "Health advisory",
         masks: "Statewide",
         href: "https://covid19.nj.gov/faqs/nj-information/general-public/which-states-are-on-the-travel-advisory-list-are-there-travel-restrictions-to-or-from-new-jersey"
       },
       {
-        state: "New Mexico",
+        stateinfo: "New Mexico",
         restrictions: "Quarantine",
         masks: "Statewide",
         href: "https://www.newmexico.org/covid-19-traveler-information/"
       },
       {
-        state: "New York",
+        stateinfo: "New York",
         restrictions: "Quarantine",
         masks: "Statewide",
         href: "https://coronavirus.health.ny.gov/covid-19-travel-advisory"
       },
       {
-        state: "North Carolina",
+        stateinfo: "North Carolina",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.nc.gov/covid-19/covid-19-travel-resources"
       },
       {
-        state: "North Dakota",
+        stateinfo: "North Dakota",
         restrictions: "None",
         masks: "No",
         href: "https://www.health.nd.gov/diseases-conditions/coronavirus/travel"
       },
       {
-        state: "Ohio",
+        stateinfo: "Ohio",
         restrictions: "Health advisory",
         masks: "Statewide",
         href: "https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home"
       },
       {
-        state: "Oklahoma",
+        stateinfo: "Oklahoma",
         restrictions: "None",
         masks: "Some cities",
         href: "https://coronavirus.health.ok.gov/travel"
       },
       {
-        state: "Oregon",
+        stateinfo: "Oregon",
         restrictions: "None",
         masks: "Statewide",
         href: "https://traveloregon.com/travel-alerts/"
       },
       {
-        state: "Pennsylvania",
+        stateinfo: "Pennsylvania",
         restrictions: "Health advisory",
         masks: "Statewide",
         href: "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Travelers.aspx"
       },
       {
-        state: "Rhode Island",
+        stateinfo: "Rhode Island",
         restrictions: "Quarantine with testing exceptions",
         masks: "Statewide",
         href: "https://health.ri.gov/covid/"
       },
       {
-        state: "South Carolina",
+        stateinfo: "South Carolina",
         restrictions: "Health advisory",
         masks: "Statewide",
         href: "https://scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/travelers-covid-19"
       },
       {
-        state: "South Dakota",
+        stateinfo: "South Dakota",
         restrictions: "None",
         masks: "No",
         href: "https://www.travelsouthdakota.com/coronavirus-covid-19"
       },
       {
-        state: "Tennessee",
+        stateinfo: "Tennessee",
         restrictions: "None",
         masks: "Some cities",
         href: "https://www.tnvacation.com/articles/tennessee-travel-amid-coronavirus"
       },
       {
-        state: "Texas",
+        stateinfo: "Texas",
         restrictions: "None",
         masks: "Some cities",
         href: "https://gov.texas.gov/travel-texas/page/covid19"
       },
       {
-        state: "Utah",
+        stateinfo: "Utah",
         restrictions: "None",
         masks: "Some cities",
         href: "https://www.visitutah.com/plan-your-trip/covid-19/"
       },
       {
-        state: "Vermont",
+        stateinfo: "Vermont",
         restrictions: "Quarantine with testing exceptions",
         masks: "Statewide",
         href: "https://www.healthvermont.gov/response/coronavirus-covid-19/traveling-vermont"
       },
       {
-        state: "Virginia",
+        stateinfo: "Virginia",
         restrictions: "None",
         masks: "Statewide",
         href: "https://washington.org/dc-information/coronavirus-travel-update-washington-dc"
       },
       {
-        state: "Washington",
+        stateinfo: "Washington",
         restrictions: "None",
         masks: "Statewide",
         href: "https://www.vdh.virginia.gov/coronavirus/frequently-asked-questions/u-s-travelers/"
       },
       {
-        state: "Washington, DC",
+        stateinfo: "Washington, DC",
         restrictions: "Quarantine",
         masks: "Statwide",
         href: "https://www.experiencewa.com/articles/date-coronavirus-travel-advisory"
       },
       {
-        state: "West Virginia",
+        stateinfo: "West Virginia",
         restrictions: "None",
         masks: "Statewide",
         href: "https://wvtourism.com/travel-alert/"
       },
       {
-        state: "Wisconsin",
+        stateinfo: "Wisconsin",
         restrictions: "None",
         masks: "No",
         href: "https://www.dhs.wisconsin.gov/covid-19/travel.htm"
       },
       {
-        state: "Wyoming",
+        stateinfo: "Wyoming",
         restrictions: "None",
         masks: "Some cities",
         href: "https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/covid-19-orders-and-guidance/"
@@ -326,11 +326,11 @@ const infoSeed = [
 // 1. Create the model for state restrictions
 // e.g. restriction
 
-db.Info
+db.InfoStates
     .remove({})
-    .then(() => db.Info.insertMany(infoSeed))
+    .then(() => db.InfoStates.insertMany(InfoStateSeed))
     .then(data => {
-        console.log(data.result.n + " records inserted!");
+        //console.log(data.result.n + " records inserted!");
         process.exit(0);
     })
     .catch(err => {
