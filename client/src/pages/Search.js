@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Hero from "../components/Hero"
 import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
@@ -41,23 +42,25 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <Container style={{ minHeight: "80%" }}>
-        
+          <Hero backgroundImage="https://smb.ibsrv.net/imageresizer/image/article_manager/1200x1200/26314/4376/heroimage0.747074001507133347.jpg">
           <h1 className="text-center">Enter the State you are traveling to!</h1>
-          <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-          >
-            {this.state.error}
-          </Alert>
           <SearchForm
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
             region={this.state.region}
           />
+          </Hero>
+        <Container style={{ minHeight: "80%" }}>
+        <Alert
+            type="danger"
+            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
+          >
+            {this.state.error}
+          </Alert>
+        
          <SearchResults active_cases={this.state.active_cases}></SearchResults>
         <Info></Info>
-         
+     
         </Container>
       </div>
     );
