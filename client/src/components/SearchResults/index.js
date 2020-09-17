@@ -4,7 +4,7 @@ import "./style.css";
 
 function SearchResults(props) {
   return (
-       <p>Active Cases in this region: { props.active_cases }</p>
+       <h5>Active Cases in this region: { props.active_cases }</h5>
      );
 }
 

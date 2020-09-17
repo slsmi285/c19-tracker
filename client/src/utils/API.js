@@ -20,9 +20,9 @@ export default {
   // Is this where we are calling the mongo db on the infoseed?
   //   // Gets all info
   
-	getInfo: function () {
-        return axios.get("/api/info");
-      },
+	// getInfo: function () {
+  //       return axios.get("/api/info");
+  //     },
       // Gets the info with the given id
       getInfo: function (id) {
         return axios.get("/api/info/" + id);

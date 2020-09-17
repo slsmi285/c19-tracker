@@ -6,7 +6,7 @@ import Col from "../components/Col";
 
 
 
-function About() {
+function Information() {
     return (
         <div>
           <Hero backgroundImage="https://splashanddashfordogs.com/wp-content/uploads/2016/07/july-4b-720x321.jpg">
@@ -16,16 +16,13 @@ function About() {
           <Container style={{ marginTop: 40 }}>
             <Row>
               <Col size="md-12">
-                <h1>Welcome To C19 Tracker!</h1>
-                <p>Start with the Register Page, register a username and password.<br>
-                </br>
-                <br></br>
-                You will be directed to the Search Page, enter a State you will be traveling to.
-                </p>
+                <h1>Allergies or Covid-19 ?</h1>
+                
+                
               </Col>
             </Row>
           </Container>
         </div>
       );
     }
-    export default About;
+    export default Information;

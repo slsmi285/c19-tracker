@@ -6,15 +6,14 @@ function SearchForm(props) {
   return (
     <form className="search">
       <div className="form-group">
-        <label htmlFor="region">State Name:</label>
+        <label htmlFor="region">Type in a State:</label>
         <input
           value={props.search}
           onChange={props.handleInputChange}
           name="region"
-          //list="breeds"
           type="text"
           className="form-control"
-          placeholder="Type in a State"
+          placeholder="i.e., Tennessee"
           id="region"
         />
        

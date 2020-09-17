@@ -2,4 +2,22 @@ nav.navbar.navbar-default {
     margin-bottom: 0;
 
   }
+  .nav-link {
+    margin: 10px;
+  }
+  .navbar {
+    background-color: lightslategray;
+    border: 1px solid darkgray;
+    height: fit-content;
+   
+   }
+   .navbar-nav{
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
   
+   } 
+  a {
+    color: white;
+  }
+ 
+ 

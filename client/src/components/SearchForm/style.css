@@ -6,3 +6,19 @@ form.search {
     float: right;
     margin-top: 10px;
   }
+ .form-control {
+   width: 25%;
+   display: center;
+ }
+ label {
+   font-weight: bolder;
+ }
+ .hero:after {
+   
+   background-color: transparent;
+ }
+ body {
+   background-color: cornflowerblue;
+   border: 5px solid slategray;
+ }
+ 
