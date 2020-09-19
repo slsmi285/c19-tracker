@@ -1,41 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 
-const Info = props => (
-    <tr>
-        <td>{props.info.info_stateinfo}</td>
-        <td>{props.info.info_restrictions}</td>
-        <td>{props.info.info_masks}</td>
-        <td>{props.info.info_href}</td>
-        <td>
-            <Link to={"/edit/"+props.info._id}>Edit</Link>
-        </td>
-    </tr>
-)
+
 
 export default class InfoList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {info: []};
+
     }
 
-    componentDidMount() {
-        axios.get('http://localhost:3001/info/1')
-            .then(response => {
-                this.setState({ info: response.data });
-            })
-            .catch(function (error){
-                console.log(error);
-            })
-    }
 
-    infoList() {
-        return this.state.info.map(function(currentInfo, i){
-            return <Info info={currentInfo} key={i} />;
-        })
-    }
 
     render() {
         return (
@@ -49,9 +23,15 @@ export default class InfoList extends Component {
                             <th>Masks</th>
                             <th>Href:</th>
                         </tr>
+
                     </thead>
                     <tbody>
-                        { this.infoList() }
+                        <tr>
+                            <td>{this.props.stateinfo}</td>
+                            <td>{this.props.restrictions}</td>
+                            <td>{this.props.masks}</td>
+                            <td>{this.props.href}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

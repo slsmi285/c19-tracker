@@ -17,27 +17,14 @@ export default {
     }),
 
 
-  // Is this where we are calling the mongo db on the infoseed?
+  // Is this where we are calling the mongo db on the infoseed
   //   // Gets all info
   
-	// getInfo: function () {
-  //       return axios.get("/api/info");
-  //     },
-      // Gets the info with the given id
-      getInfo: function (id) {
-        return axios.get("/api/info/" + id);
+
+      getInfo: function () {
+        return axios.get("/api/info");
       },
-      updateInfo: function (id, infoData) {
-        return axios.put("/api/info/" + id, infoData);
-      },
-      // Deletes the info with the given id
-      deleteInfo: function (id) {
-        return axios.delete("/api/info/" + id);
-      },
-      // Saves an info to the database
-      saveinfo: function (infoData) {
-        return axios.post("/api/info", infoData);
-      },
+    
 }
   
 

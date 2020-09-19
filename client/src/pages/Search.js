@@ -11,7 +11,8 @@ class Search extends Component {
     state = {
       region: "",
       active_cases: "",
-      error: ""
+      error: "",
+      info: []
     };
 
      // When the component mounts, get a result of active cases
@@ -21,6 +22,7 @@ class Search extends Component {
       .then(res => this.setState({ region: res.data.data.summary.active_cases }))
       .catch(err => console.log(err));
   }
+  
 }
   handleInputChange = event => {
     this.setState({ region: event.target.value });
@@ -34,8 +36,11 @@ class Search extends Component {
         }
         this.setState({ active_cases: res.data.data.summary.active_cases, error: "" });
         console.log(res.data.data.summary.active_cases)
+        API.getInfo()
+            .then(response => this.setState({ info: response.data }));
       })
       .catch(err => this.setState({ error: err.message }));
+      
   };
 
 
@@ -59,7 +64,14 @@ class Search extends Component {
           </Alert>
         
          <SearchResults active_cases={this.state.active_cases}></SearchResults>
-        <Info></Info>
+        <Info 
+          stateinfo={this.state.info.stateinfo}
+          restriction={this.state.info.restrictions}
+          masks={this.state.info.masks}
+          href={this.state.info.href}
+          >
+          
+          </Info>
      
         </Container>
       </div>
