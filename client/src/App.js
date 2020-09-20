@@ -19,8 +19,9 @@ function App() {
             <Wrapper>
 
               <Route exact path="/" component={About} />
-              <Route exact path="/about" component={About} />
               <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/about" component={About} />
+              
               <Route exact path="/search" component={Search} />
               <Route exact path="/information" component={Information} />
 

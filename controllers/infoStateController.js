@@ -3,9 +3,15 @@ const db = require("../models");
 
 // Defining methods for the infoController - changed to "Info", from "Infostate"
 module.exports = {
-    findOne: function(req, res) {
+  findAll: function(req, res) {
+    db.InfoStates
+      .find(req.query)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+    findById: function(req, res) {
       db.InfoStates
-        .find(req.params)
+        .findById(req.params._id)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

@@ -11,7 +11,7 @@ const InfoStateSchema = new Schema({
 
 
 // Setting schema to variable
-const InfoState = mongoose.model("InfoState", InfoStateSchema);
+const InfoState = mongoose.model("InfoStates", InfoStateSchema);
 // Exporting
 module.exports = InfoState;
 

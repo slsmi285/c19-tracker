@@ -7,7 +7,7 @@ nav.navbar.navbar-default {
   }
   .navbar {
     background-color: lightslategray;
-    border: 1px solid darkgray;
+    border: 2px solid darkgray;
     height: fit-content;
    
    }

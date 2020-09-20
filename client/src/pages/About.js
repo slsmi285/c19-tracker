@@ -9,18 +9,16 @@ import Col from "../components/Col";
 function About() {
     return (
         <div>
-          <Hero backgroundImage="https://splashanddashfordogs.com/wp-content/uploads/2016/07/july-4b-720x321.jpg">
-            <h1>C19 Tracker</h1>
+          <Hero backgroundImage="https://www.lonelyplanet.com/news/wp-content/uploads/2018/03/Dog-with-Plane-850x567.jpg">
+            <h1>C-19 Travel Tracker</h1>
             <h2>Get the latest information on covid-19 levels for your destination area.</h2>
           </Hero>
           <Container style={{ marginTop: 40 }}>
             <Row>
               <Col size="md-12">
-                <h1>Welcome To C19 Tracker!</h1>
-                <p>Start with the Register Page, register a username and password.<br>
-                </br>
-                <br></br>
-                You will be directed to the Search Page, enter a State you will be traveling to.
+                <h3 className="about-text">Welcome!</h3>
+              <p>
+                As our lives begin to get back to a new normal, feel confident in knowing the most up to-date information. 
                 </p>
               </Col>
             </Row>

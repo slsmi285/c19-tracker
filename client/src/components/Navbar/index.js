@@ -20,6 +20,14 @@ function Navbar() {
               About
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/signin"
+              className={window.location.pathname === "/signin" ? "nav-link active" : "nav-link"}
+            >
+              SignIn
+            </Link>
+          </li>
 
 
           <li className="nav-item">
@@ -35,18 +43,11 @@ function Navbar() {
               to="/information"
               className={window.location.pathname === "/information" ? "nav-link active" : "nav-link"}
             >
-              Information
+             Best Practices
             </Link>
           </li>
 
-          <li className="nav-item">
-            <Link
-              to="/signin"
-              className={window.location.pathname === "/signin" ? "nav-link active" : "nav-link"}
-            >
-              SignIn
-            </Link>
-          </li>
+         
 
         </ul>
 
