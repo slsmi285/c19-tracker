@@ -14,6 +14,7 @@ const bodyParser = require("body-parser");//parse request and response object- u
 const User = require('./models/user');
 const { InfoState } = require("./models");
 const { Router } = require("express");
+const routes = require("./routes");
 //let travel = require("./models");
 const app = express();
 
@@ -69,7 +70,7 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
 );
 
 // // Local API for hardcoded infostate 
-// app.use(routes);
+app.use(routes);
 
 // //use the find() method to retrieve all the documents from the infostate collection from mongodb
 // router.route("/getData").get(function (req, res) {
@@ -82,23 +83,23 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
 //     });
 // });
 
-router.route('/').get(infoStateContoller.findOne);
-// middleware for api of mongo InfoState
-//const infoRoutes = express.Router();
-app.get('/api/info', infoRoutes);
-// to access the info list data in json format/
-infoRoutes.route('/').get(function (req, res) {
-    let region = req.params;
-    InfoStates.findOne(region, function (err, info) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(res)
-            res.json(info);
-        }
-    })
+// router.route('/').get(infoStateContoller.findOne);
+// // middleware for api of mongo InfoState
+// //const infoRoutes = express.Router();
+// app.get('/api/info', infoRoutes);
+// // to access the info list data in json format/
+// infoRoutes.route('/').get(function (req, res) {
+//     let region = req.params;
+//     InfoStates.findOne(region, function (err, info) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             console.log(res)
+//             res.json(info);
+//         }
+//     })
 
-});
+// });
 // URL parameter id which can be accessed via req.params.id. This id is passed into the call of Info.findById to retrieve an issue item based on it’s ID.
 
 // InfoState.findOne(region, function (err, info) {

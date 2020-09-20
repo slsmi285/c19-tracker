@@ -1,4 +1,4 @@
 module.exports = {
-    InfoState: require("./infostate"),
+    InfoStates: require("./infostate"),
     User: require('./user')
   };

@@ -19,13 +19,17 @@ export default {
 
   // Is this where we are calling the mongo db on the infoseed
   //   // Gets all info
-  
+    getAll: function () {
+      return axios.get("/api/info");
+    },
 
-      getInfo: function () {
-        return axios.get("/api/info");
-      },
-    
+    getInfo: function (id) {
+      return axios.get("/api/info/" + id);
+    },
+
+
+
 }
-  
 
-  
+
+

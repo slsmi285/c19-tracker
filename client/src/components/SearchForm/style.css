@@ -6,12 +6,21 @@ form.search {
     float: right;
     margin-top: 10px;
   }
- .form-control {
+  .search {
+    align-items: left;
+  
+    position: center;
+    
+  }
+  
+  .form-group {
    width: 25%;
-   display: center;
+   margin: auto;
+   margin-top: 25px;
  }
  label {
    font-weight: bolder;
+   color: Brown;
  }
  .hero:after {
    
@@ -19,6 +28,6 @@ form.search {
  }
  body {
    background-color: cornflowerblue;
-   border: 5px solid slategray;
+   
  }
  

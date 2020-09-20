@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Hero from "../components/Hero"
+import Hero from "../components/Hero";
 import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
@@ -8,24 +8,34 @@ import Alert from "../components/Alert";
 import Info from "../components/Info/info";
 
 class Search extends Component {
-    state = {
-      region: "",
-      active_cases: "",
-      error: "",
-      info: []
-    };
+  state = {
+    region: "",
+    active_cases: "",
+    error: "",
+    info: []
+  };
 
-     // When the component mounts, get a result of active cases
+  // When the component mounts, get a result of active cases
   componentDidMount() {
+    this.loadInfo()
     if (this.state.region) {
-    API.getRegion()
-      .then(res => this.setState({ region: res.data.data.summary.active_cases }))
-      .catch(err => console.log(err));
+      API.getRegion()
+        .then(res => this.setState({ region: res.data.data.summary.active_cases }))
+        .catch(err => console.log(err));
+    }
+
+
   }
-  
-}
+  loadInfo = () => {
+    API.getAll()
+      .then(res => this.setState({ info: res.data }))
+      .catch(err => console.log(err));
+  };
+
+
   handleInputChange = event => {
-    this.setState({ region: event.target.value });
+    this.setState(({ region: event.target.value }), () => console.log(this.state));
+    
   };
   handleFormSubmit = event => {
     event.preventDefault();
@@ -36,43 +46,60 @@ class Search extends Component {
         }
         this.setState({ active_cases: res.data.data.summary.active_cases, error: "" });
         console.log(res.data.data.summary.active_cases)
-        API.getInfo()
-            .then(response => this.setState({ info: response.data }));
+
       })
       .catch(err => this.setState({ error: err.message }));
-      
+    API.getAll()
+      .then(res => {
+        this.setState({ info: res.data })
+
+        console.log(res.data)
+      })
+
+
+
   };
 
 
   render() {
     return (
       <div>
-          <Hero backgroundImage="https://smb.ibsrv.net/imageresizer/image/article_manager/1200x1200/26314/4376/heroimage0.747074001507133347.jpg">
+        <Hero backgroundImage="https://smb.ibsrv.net/imageresizer/image/article_manager/1200x1200/26314/4376/heroimage0.747074001507133347.jpg">
+
           <h1 className="text-center">Enter the State you are traveling to!</h1>
+
           <SearchForm
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
             region={this.state.region}
           />
-          </Hero>
+
+        </Hero>
         <Container style={{ minHeight: "80%" }}>
-        <Alert
+          <Alert
             type="danger"
             style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
           >
             {this.state.error}
           </Alert>
-        
-         <SearchResults active_cases={this.state.active_cases}></SearchResults>
-        <Info 
-          stateinfo={this.state.info.stateinfo}
-          restriction={this.state.info.restrictions}
-          masks={this.state.info.masks}
-          href={this.state.info.href}
-          >
-          
-          </Info>
-     
+
+          <SearchResults active_cases={this.state.active_cases}></SearchResults>
+
+          {this.state.info.map((region, destination) => {
+            if (this.state.region === destination.stateinfo) {
+              return (<Info key={destination._id}
+                stateinfo={destination.stateinfo}
+                restrictions={destination.restrictions}
+                masks={destination.masks}
+                href={destination.href}
+              >
+
+              </Info>
+
+              )
+            }
+          })
+  }
         </Container>
       </div>
     );
