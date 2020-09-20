@@ -22,7 +22,7 @@ function App() {
               <Route exact path="/about" component={About} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/search" component={Search} />
-              <Route exact path="/information" components={Information} />
+              <Route exact path="/information" component={Information} />
 
 
             </Wrapper>

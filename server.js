@@ -85,7 +85,7 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
 router.route('/').get(infoStateContoller.findOne);
 // middleware for api of mongo InfoState
 //const infoRoutes = express.Router();
-app.get('/info', infoRoutes);
+app.get('/api/info', infoRoutes);
 // to access the info list data in json format/
 infoRoutes.route('/').get(function (req, res) {
     let region = req.params;
