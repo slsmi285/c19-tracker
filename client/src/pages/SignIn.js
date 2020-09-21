@@ -1,9 +1,8 @@
-//import Hero from "../components/Hero";
 import React, { useState } from 'react';
 import Container from "../components/Container";
 import Hero from "../components/Hero";
 import axios from 'axios';
-//import SearchResults from "../components/Passport";
+
 
 
 function SignIn(props) {
@@ -51,38 +50,38 @@ function SignIn(props) {
 
     return (
         <div>
-        <Hero backgroundImage="https://www.petguide.com/wp-content/uploads/2018/05/give-paw.jpg">
+            <Hero backgroundImage="https://www.petguide.com/wp-content/uploads/2018/05/give-paw.jpg">
 
-          <div className="sign-form">
-                <div>
-                    <h3 className="register-text">Register</h3>
-                    <input placeholder='username' onChange={e => setRegisterUsername(e.target.value)} />
-                    <input placeholder='password' onChange={e => setRegisterPassword(e.target.value)} />
-                    <button onClick={register}>Submit</button>
+                <div className="sign-form">
+                    <div>
+                        <h3 className="register-text">Register</h3>
+                        <input placeholder='username' onChange={e => setRegisterUsername(e.target.value)} />
+                        <input placeholder='password' onChange={e => setRegisterPassword(e.target.value)} />
+                        <button onClick={register}>Submit</button>
+                    </div>
+                    <div>
+                        <h3 className="register-text">Login</h3>
+                        <input placeholder='username' onChange={e => setLoginUsername(e.target.value)} />
+                        <input placeholder='password' onChange={e => setLoginPassword(e.target.value)} />
+                        <button onClick={login}>Submit</button>
+                    </div>
                 </div>
-                <div>
-                    <h3 className="register-text">Login</h3>
-                    <input placeholder='username' onChange={e => setLoginUsername(e.target.value)} />
-                    <input placeholder='password' onChange={e => setLoginPassword(e.target.value)} />
-                    <button onClick={login}>Submit</button>
-                </div>
-                </div>
-        
-        
-        <Container style={{ minHeight: "80%" }}>
-            {err ? (<div>{err}</div>) : null}
-           
-    
-           
-         
-                
-            </Container > 
+
+
+                <Container style={{ minHeight: "80%" }}>
+                    {err ? (<div>{err}</div>) : null}
+
+
+
+
+
+                </Container >
             </Hero>
 
             <h1 className="signin-text">C-19 Travel Tracker</h1>
-            </div>
+        </div>
 
-        );
+    );
 }
 
 
