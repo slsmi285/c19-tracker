@@ -50,8 +50,8 @@ function SignIn(props) {
 
     return (
         <div>
-            <Hero backgroundImage="https://www.petguide.com/wp-content/uploads/2018/05/give-paw.jpg">
-
+            <Hero className="herosign" backgroundImage="https://get.pxhere.com/photo/snow-white-sweet-puppy-dog-animal-canine-portrait-young-brown-mammal-black-friend-bulldog-pug-paw-little-vertebrate-funny-english-adorable-dog-breed-pup-doggy-cute-puppy-old-english-bulldog-dog-like-mammal-670661.jpg">
+                <h1 id="heder-signin">C-19 Travel Tracker</h1>
                 <div className="sign-form">
                     <div>
                         <h3 className="register-text">Register</h3>
@@ -59,6 +59,7 @@ function SignIn(props) {
                         <input placeholder='password' onChange={e => setRegisterPassword(e.target.value)} />
                         <button onClick={register}>Submit</button>
                     </div>
+
                     <div>
                         <h3 className="register-text">Login</h3>
                         <input placeholder='username' onChange={e => setLoginUsername(e.target.value)} />
@@ -78,7 +79,7 @@ function SignIn(props) {
                 </Container >
             </Hero>
 
-            <h1 className="signin-text">C-19 Travel Tracker</h1>
+
         </div>
 
     );

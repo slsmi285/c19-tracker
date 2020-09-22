@@ -13,10 +13,11 @@ form.search {
     
   }
   
+  
   .form-group {
    width: 25%;
-   margin: auto;
-   margin-top: 25px;
+   margin-left: 500px;
+   margin-top: 150px;
  }
  label {
    font-weight: bolder;

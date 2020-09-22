@@ -1,9 +1,18 @@
+#heder-signin {
+  color: brown;
+  float: left;
+  margin-left: 50px;
+  margin-top: 175px;
+}
+#bpimage {
+  background-position-y: center;
+  background-position-x: center;
+}
 .hero {
-  height: 600px;
+  height: 650px;
   background-size: cover;
-  background-position: center;
+  background-position-y: center;
   position: relative;
-
 }
 .hero::after {
   content: "";
@@ -49,19 +58,22 @@
 }
 .best-text-heder {
   text-align: left;
+  margin-left: 50px;
   
 }
 .text-center {
   margin-top: 0;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .text-signin {
   margin-bottom: 100px;
   
 }
 .register-text {
-  color: white;
+  color: brown;
   font-weight: bolder;
+  margin-top: 20px;
+  text-shadow: 3px solid black;
 
 }
 .signin-text {
@@ -70,7 +82,22 @@
   text-align: center;
 }
 .sign-form {
- padding-top: 75px;
- 
+ padding-top: 100px;
+ float: right;
+ margin-right: 175px;
 }
+
+input {
+  width: 25%;
+  margin-top: 5px;
+  font-family: cursive;
+  border-radius: 6px;
+  
+}
+button {
+  background-color: green;
+  color: white;
+}
+
+
  

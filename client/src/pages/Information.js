@@ -9,7 +9,7 @@ import Col from "../components/Col";
 function Information() {
   return (
     <div>
-      <Hero backgroundImage="https://i.imgur.com/P3oqALW.jpeg">
+      <Hero id="bpimage" backgroundImage="https://i.imgur.com/P3oqALW.jpeg">
 
         <h2 className="best-text-heder">Best Practices:</h2>
         <h5 className="best-practice"><ol>
@@ -38,7 +38,7 @@ function Information() {
               <h2>Symptoms of Covid-19:</h2>
               <p>COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.</p>
               <h4>Most Common:</h4>
-              <h5 className="best-practice"></h5>
+              {/* <h5 className="best-practice"></h5> */}
               <ul>
                 <li>Fever, dry cough, and or tiredness</li>
               </ul>
