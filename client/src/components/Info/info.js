@@ -22,7 +22,7 @@ export default class InfoList extends Component {
                             <th>State Info</th>
                             <th>Restrictions</th>
                             <th>Masks</th>
-                            <th>Href:</th>
+                            <th>Link</th>
                         </tr>
 
                     </thead>
@@ -31,7 +31,7 @@ export default class InfoList extends Component {
                             <td>{this.props.stateinfo}</td>
                             <td>{this.props.restrictions}</td>
                             <td>{this.props.masks}</td>
-                            <td>{this.props.href}</td>
+                            <td><a href={this.props.href} target="_blank">link</a></td>
                         </tr>
                     </tbody>
                 </table>
