@@ -1,15 +1,12 @@
 #heder-signin {
   color: brown;
   float: left;
-  margin-left: 50px;
-  margin-top: 175px;
+  margin-left: 200px;
+  
 }
-#bpimage {
-  background-position-y: center;
-  background-position-x: center;
-}
+
 .hero {
-  height: 650px;
+  height: 600px;
   background-size: cover;
   background-position-y: center;
   position: relative;
@@ -63,7 +60,8 @@
 }
 .text-center {
   margin-top: 0;
-  padding-top: 50px;
+  padding-top: 75px;
+  text-align: center;
 }
 .text-signin {
   margin-bottom: 100px;
@@ -82,13 +80,15 @@
   text-align: center;
 }
 .sign-form {
- padding-top: 100px;
- float: right;
- margin-right: 175px;
+ padding-top: 75px;
+position: absolute;
+float: left;
+margin-right: 900px;
+
 }
 
 input {
-  width: 25%;
+  
   margin-top: 5px;
   font-family: cursive;
   border-radius: 6px;
