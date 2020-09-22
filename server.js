@@ -72,77 +72,11 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
 // // Local API for hardcoded infostate 
 app.use(routes);
 
-// //use the find() method to retrieve all the documents from the infostate collection from mongodb
-// router.route("/getData").get(function (req, res) {
-//     infostate.find({}, function (err, result) {
-//         if (err) {
-//             res.send(err);
-//         } else {
-//             res.send(result);
-//         }
-//     });
-// });
 
-// router.route('/').get(infoStateContoller.findOne);
-// // middleware for api of mongo InfoState
-// //const infoRoutes = express.Router();
-// app.get('/api/info', infoRoutes);
-// // to access the info list data in json format/
-// infoRoutes.route('/').get(function (req, res) {
-//     let region = req.params;
-//     InfoStates.findOne(region, function (err, info) {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             console.log(res)
-//             res.json(info);
-//         }
-//     })
-
-// });
-// URL parameter id which can be accessed via req.params.id. This id is passed into the call of Info.findById to retrieve an issue item based on it’s ID.
-
-// InfoState.findOne(region, function (err, info) {
-//     res.json(info);
-// });
-// infoRoutes.route('/update/:id').post(function (req, res) {
-//     Info.findById(req.params.id, function (err, info) {
-//         if (!info) {
-//             res.status(404).send("data is not found");
-//             // used to update the user if there is any present data
-//         } else {
-//             info.info_stateinfo = req.body.info_stateinfo;
-//             info.info_restrictions = req.body.info_restricitions;
-//             info.info_masks = req.body.info_masks;
-//             info.info_href = req.body.info_href;
-//             info.save().then(info => {
-//                 res.json('Info updated!');
-
-//             })
-//                 .catch(err => {
-//                     res.status(400).send("Update not possible");
-//                 });
-//         }
-//     })
-// })
-
-
-//  with this post request, you will be able to add a new item in your info list
-// infoRoutes.route('/add').post(function (req, res) {
-//     let info = new Info(req.body);
-//     info.save()
-//         .then(info => {
-//             res.status(200).json({ 'info': 'info added successfully' });
-//         })
-//         .catch(err => {
-//             res.status(400).send('adding new info failed');
-//         });
-//     })
-    //------------------------------------------------------------------
 
     //Routes - passport 
     app.post("/login", (req, res, next) => {
-        passport.authenticate('local', function (err, user, info) {
+        passport.authenticate('local', (err, user, info) => {
             if (err) { return console.log(err); }
             if (!user) { return res.json({ user, error: "Invalid" }) }
 
