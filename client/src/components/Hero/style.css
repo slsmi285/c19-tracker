@@ -1,80 +1,103 @@
- 
-  .hero {
-    height: 600px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-  }
+#heder-signin {
+  color: brown;
+  float: left;
+  margin-left: 50px;
+  margin-top: 175px;
+}
+#bpimage {
+  background-position-y: center;
+  background-position-x: center;
+}
+.hero {
+  height: 650px;
+  background-size: cover;
+  background-position-y: center;
+  position: relative;
+}
 .hero::after {
-    content: "";
-    display: block;
-    opacity: .4;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: black;
-  }
-  .hero * {
-    position: relative;
-    z-index: 2;
-  }
-  .hero h1 {
-    color: white;
-    font: bolder;
-  }
- 
-  
-  .hero h2 {
-    color: white;
-    font: bolder;
-    padding-top: 0;
-    margin-top: 0px;
-   
-    margin-left: 50px;
-  }
-  .hero h1 {
-    font-size: 60px;
-    padding-top: 0px;
-    margin-top: 0;
-    font-style: inherit;
-    font-weight: bolder;
-  }
-  .best-practice {
-    text-align: justify;
-    margin-left: 50px;
-    color: white;
-    font: bolder;
-    padding-top: 0;
-    margin-top: 0;
-    font-family: 'Times New Roman', Times, serif;
-  
-  }
-  .best-text-heder {
-    text-align: left;
-    
-  }
-  .text-center {
-    margin-top: 0;
-    padding-top: 100px;
-  }
-  .text-signin {
-    margin-bottom: 100px;
-    
-  }
-  .register-text {
-    color: white;
-    font-weight: bolder;
+  content: "";
+  display: block;
+  opacity: .4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  color: white;
+  font: bolder; 
+  font-size: 60px;
+  padding-top: 0px;
+  margin-top: 0;
+  font-style: inherit;
+}
 
-  }
-  .signin-text {
-    color: white;
-    font-weight: bolder;
-    text-align: center;
-  }
-  .sign-form {
-   padding-top: 75px;
-   
-  }
+.hero h2 {
+  color: white;
+  font: bolder;
+  padding-top: 0;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+
+.best-practice {
+  text-align: justify;
+  margin-left: 50px;
+  color: white;
+  font: bolder;
+  padding-top: 0;
+  margin-top: 0;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.best-text-heder {
+  text-align: left;
+  margin-left: 50px;
+  
+}
+.text-center {
+  margin-top: 0;
+  padding-top: 50px;
+}
+.text-signin {
+  margin-bottom: 100px;
+  
+}
+.register-text {
+  color: brown;
+  font-weight: bolder;
+  margin-top: 20px;
+  text-shadow: 3px solid black;
+
+}
+.signin-text {
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+.sign-form {
+ padding-top: 100px;
+ float: right;
+ margin-right: 175px;
+}
+
+input {
+  width: 25%;
+  margin-top: 5px;
+  font-family: cursive;
+  border-radius: 6px;
+  
+}
+button {
+  background-color: green;
+  color: white;
+}
+
+
+ 

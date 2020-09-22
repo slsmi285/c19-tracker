@@ -7,6 +7,7 @@ export default class InfoList extends Component {
     constructor(props) {
         super(props);
 
+        
     }
 
 

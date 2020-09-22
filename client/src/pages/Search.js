@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
+import Wrapper from "../components/Wrapper";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 import Alert from "../components/Alert";
@@ -32,10 +33,38 @@ class Search extends Component {
       .catch(err => console.log(err));
   };
 
+  updateRegion = () => {
+    let region = this.state.region;
+    console.log(region);
+
+    let regionResults = this.state.info.map((destination) => {
+      console.log(region);
+      console.log(destination.stateinfo);
+      if (region === destination.stateinfo) {
+        return (
+          <Info key={destination._id}
+            stateinfo={destination.stateinfo}
+            restrictions={destination.restrictions}
+            masks={destination.masks}
+            href={destination.href}
+          >
+
+          </Info>
+
+        )
+      }
+    });
+
+    this.setState({ 
+      results: regionResults
+    })
+  }
 
   handleInputChange = event => {
+
+
     this.setState(({ region: event.target.value }), () => console.log(this.state));
-    
+
   };
   handleFormSubmit = event => {
     event.preventDefault();
@@ -45,6 +74,7 @@ class Search extends Component {
           throw new Error(res.data.message);
         }
         this.setState({ active_cases: res.data.data.summary.active_cases, error: "" });
+
         console.log(res.data.data.summary.active_cases)
 
       })
@@ -52,6 +82,7 @@ class Search extends Component {
     API.getAll()
       .then(res => {
         this.setState({ info: res.data })
+        this.updateRegion();
 
         console.log(res.data)
       })
@@ -76,30 +107,18 @@ class Search extends Component {
 
         </Hero>
         <Container style={{ minHeight: "80%" }}>
-          <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-          >
-            {this.state.error}
-          </Alert>
+          <Wrapper>
+            <Alert
+              type="danger"
+              style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
+            >
+              {this.state.error}
+            </Alert>
 
-          <SearchResults active_cases={this.state.active_cases}></SearchResults>
+            <SearchResults active_cases={this.state.active_cases}></SearchResults>
 
-          {this.state.info.map((region, destination) => {
-            if (this.state.region === destination.stateinfo) {
-              return (<Info key={destination._id}
-                stateinfo={destination.stateinfo}
-                restrictions={destination.restrictions}
-                masks={destination.masks}
-                href={destination.href}
-              >
-
-              </Info>
-
-              )
-            }
-          })
-  }
+           {this.state.results}
+          </Wrapper>
         </Container>
       </div>
     );
