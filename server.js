@@ -70,9 +70,6 @@ mongoose.connect("mongodb+srv://slsmi285:Florida89!@cluster0.upwzp.mongodb.net/p
 );
 
 // // Local API for hardcoded infostate 
-app.use(routes);
-
-
 
     //Routes - passport 
     app.post("/login", (req, res, next) => {
@@ -114,6 +111,8 @@ app.use(routes);
     app.get("/user", (req, res) => {
         res.send(req.User);//The req.user stores the entire user that has been authenticated inside of it, has all the session data
     });
+
+    app.use(routes);
     // end of Routes
 
 
