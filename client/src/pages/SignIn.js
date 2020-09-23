@@ -17,6 +17,7 @@ function SignIn(props) {
     const register = (e) => {
         axios({
             method: "POST",
+            
             data: {
                 username: registerUsername,
                 password: registerPassword,
@@ -72,11 +73,12 @@ function SignIn(props) {
 
 
 
+
                 </Container >
-            </Hero>
+            </Hero >
 
 
-        </div>
+        </div >
 
     );
 }
