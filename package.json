@@ -38,6 +38,7 @@
     "mongoose": "^5.10.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "react-background-slideshow": "^1.0.4",
     "react-router-dom": "^5.2.0"
   }
 }
