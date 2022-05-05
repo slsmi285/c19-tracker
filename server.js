@@ -15,7 +15,7 @@ const app = express();
 
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Middleware - express first two code lines are needed
 app.use(bodyParser.json());
